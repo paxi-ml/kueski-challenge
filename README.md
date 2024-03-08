@@ -4,7 +4,9 @@ Challenge project for Kueski hiring process
 # Project Setup
 
 1. Install Pods using `pod install`
-
+2. Add 'Production.xcconfig' to Resources/ folder with content: 
+`#include "Pods/Target Support Files/Pods-KueskiChallenge/Pods-KueskiChallenge.release.xcconfig"`
+`MOVIE_DB_API_KEY = <KEY>`
 
 # Project Structure
 Each project may have different requirements, features, estimated codebase growth, team size, etc. Based on this we can select an appropriate project structure, in general terms what we need is to separate the different semantic layers with an architectural pattern, may it be MVC, MVVM or VIPER. We'll start with a 3 layer approach as MVC and MVVM to avoid overcomplication.
