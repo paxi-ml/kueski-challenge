@@ -25,6 +25,10 @@
 		57CAC5D52B9AD62E00E68ECA /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAC5D42B9AD62E00E68ECA /* MovieService.swift */; };
 		57CAC5D72B9AD64E00E68ECA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAC5D62B9AD64E00E68ECA /* Constants.swift */; };
 		57CAC5D92B9AD76200E68ECA /* MovieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAC5D82B9AD76200E68ECA /* MovieManager.swift */; };
+		57CAC5DB2B9AE45600E68ECA /* MovieTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAC5DA2B9AE45600E68ECA /* MovieTableCell.swift */; };
+		57CAC5DD2B9AE47500E68ECA /* MovieCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAC5DC2B9AE47500E68ECA /* MovieCollectionCell.swift */; };
+		57CAC5DF2B9AE4D900E68ECA /* MovieTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57CAC5DE2B9AE4D900E68ECA /* MovieTableCell.xib */; };
+		57CAC5E12B9AE4E700E68ECA /* MovieCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57CAC5E02B9AE4E600E68ECA /* MovieCollectionCell.xib */; };
 		DF156A90C7025826840228CF /* Pods_KueskiChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC16714D4561EA9348D6888 /* Pods_KueskiChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +75,10 @@
 		57CAC5D42B9AD62E00E68ECA /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		57CAC5D62B9AD64E00E68ECA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		57CAC5D82B9AD76200E68ECA /* MovieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieManager.swift; sourceTree = "<group>"; };
+		57CAC5DA2B9AE45600E68ECA /* MovieTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableCell.swift; sourceTree = "<group>"; };
+		57CAC5DC2B9AE47500E68ECA /* MovieCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionCell.swift; sourceTree = "<group>"; };
+		57CAC5DE2B9AE4D900E68ECA /* MovieTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieTableCell.xib; sourceTree = "<group>"; };
+		57CAC5E02B9AE4E600E68ECA /* MovieCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieCollectionCell.xib; sourceTree = "<group>"; };
 		DCAFEC0D83FE37BB928805E4 /* Pods-KueskiChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KueskiChallenge.release.xcconfig"; path = "Target Support Files/Pods-KueskiChallenge/Pods-KueskiChallenge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -219,6 +227,10 @@
 			isa = PBXGroup;
 			children = (
 				57CAC5902B9AC9D400E68ECA /* Home.storyboard */,
+				57CAC5DA2B9AE45600E68ECA /* MovieTableCell.swift */,
+				57CAC5DE2B9AE4D900E68ECA /* MovieTableCell.xib */,
+				57CAC5DC2B9AE47500E68ECA /* MovieCollectionCell.swift */,
+				57CAC5E02B9AE4E600E68ECA /* MovieCollectionCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -385,6 +397,8 @@
 				57CAC5972B9AC9D500E68ECA /* Assets.xcassets in Resources */,
 				57CAC59A2B9AC9D500E68ECA /* Base in Resources */,
 				57CAC5922B9AC9D400E68ECA /* Base in Resources */,
+				57CAC5E12B9AE4E700E68ECA /* MovieCollectionCell.xib in Resources */,
+				57CAC5DF2B9AE4D900E68ECA /* MovieTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,9 +471,11 @@
 				57CAC5D12B9AD56800E68ECA /* Parseable.swift in Sources */,
 				57CAC5D92B9AD76200E68ECA /* MovieManager.swift in Sources */,
 				57CAC58B2B9AC9D400E68ECA /* AppDelegate.swift in Sources */,
+				57CAC5DB2B9AE45600E68ECA /* MovieTableCell.swift in Sources */,
 				57CAC5D52B9AD62E00E68ECA /* MovieService.swift in Sources */,
 				57CAC58D2B9AC9D400E68ECA /* SceneDelegate.swift in Sources */,
 				57CAC5952B9AC9D400E68ECA /* KueskiChallenge.xcdatamodeld in Sources */,
+				57CAC5DD2B9AE47500E68ECA /* MovieCollectionCell.swift in Sources */,
 				57CAC5CB2B9AD53400E68ECA /* Movie.swift in Sources */,
 				57CAC5CF2B9AD55C00E68ECA /* MoviePage.swift in Sources */,
 				57CAC5CD2B9AD54800E68ECA /* MovieDBConfiguration.swift in Sources */,
