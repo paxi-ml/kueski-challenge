@@ -1,0 +1,16 @@
+source 'https://github.com/CocoaPods/Specs.git'
+project 'KueskiChallenge.xcodeproj'
+
+platform :ios, '17.0'
+
+use_frameworks!
+
+def all_pods
+  pod 'Alamofire', '~> 4'
+  pod 'AlamofireImage', '~> 3'
+  pod 'AlamofireNetworkActivityIndicator', '~> 2'
+end
+
+target 'KueskiChallenge' do
+  all_pods
+end

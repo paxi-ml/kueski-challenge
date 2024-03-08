@@ -1,0 +1,795 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		57CAC58B2B9AC9D400E68ECA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAC58A2B9AC9D400E68ECA /* AppDelegate.swift */; };
+		57CAC58D2B9AC9D400E68ECA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAC58C2B9AC9D400E68ECA /* SceneDelegate.swift */; };
+		57CAC58F2B9AC9D400E68ECA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAC58E2B9AC9D400E68ECA /* HomeViewController.swift */; };
+		57CAC5922B9AC9D400E68ECA /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 57CAC5912B9AC9D400E68ECA /* Base */; };
+		57CAC5952B9AC9D400E68ECA /* KueskiChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57CAC5932B9AC9D400E68ECA /* KueskiChallenge.xcdatamodeld */; };
+		57CAC5972B9AC9D500E68ECA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57CAC5962B9AC9D500E68ECA /* Assets.xcassets */; };
+		57CAC59A2B9AC9D500E68ECA /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 57CAC5992B9AC9D500E68ECA /* Base */; };
+		57CAC5A52B9AC9D600E68ECA /* KueskiChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAC5A42B9AC9D600E68ECA /* KueskiChallengeTests.swift */; };
+		57CAC5AF2B9AC9D600E68ECA /* KueskiChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAC5AE2B9AC9D600E68ECA /* KueskiChallengeUITests.swift */; };
+		57CAC5B12B9AC9D600E68ECA /* KueskiChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAC5B02B9AC9D600E68ECA /* KueskiChallengeUITestsLaunchTests.swift */; };
+		DF156A90C7025826840228CF /* Pods_KueskiChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC16714D4561EA9348D6888 /* Pods_KueskiChallenge.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		57CAC5A12B9AC9D600E68ECA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57CAC57F2B9AC9D400E68ECA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57CAC5862B9AC9D400E68ECA;
+			remoteInfo = KueskiChallenge;
+		};
+		57CAC5AB2B9AC9D600E68ECA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57CAC57F2B9AC9D400E68ECA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57CAC5862B9AC9D400E68ECA;
+			remoteInfo = KueskiChallenge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05357736D49AD9D7462CBB02 /* Pods-KueskiChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KueskiChallenge.debug.xcconfig"; path = "Target Support Files/Pods-KueskiChallenge/Pods-KueskiChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		2FC16714D4561EA9348D6888 /* Pods_KueskiChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KueskiChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57CAC5872B9AC9D400E68ECA /* KueskiChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KueskiChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		57CAC58A2B9AC9D400E68ECA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		57CAC58C2B9AC9D400E68ECA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		57CAC58E2B9AC9D400E68ECA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		57CAC5912B9AC9D400E68ECA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		57CAC5942B9AC9D400E68ECA /* KueskiChallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KueskiChallenge.xcdatamodel; sourceTree = "<group>"; };
+		57CAC5962B9AC9D500E68ECA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		57CAC5992B9AC9D500E68ECA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		57CAC59B2B9AC9D500E68ECA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57CAC5A02B9AC9D600E68ECA /* KueskiChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KueskiChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		57CAC5A42B9AC9D600E68ECA /* KueskiChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KueskiChallengeTests.swift; sourceTree = "<group>"; };
+		57CAC5AA2B9AC9D600E68ECA /* KueskiChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KueskiChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		57CAC5AE2B9AC9D600E68ECA /* KueskiChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KueskiChallengeUITests.swift; sourceTree = "<group>"; };
+		57CAC5B02B9AC9D600E68ECA /* KueskiChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KueskiChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DCAFEC0D83FE37BB928805E4 /* Pods-KueskiChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KueskiChallenge.release.xcconfig"; path = "Target Support Files/Pods-KueskiChallenge/Pods-KueskiChallenge.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		57CAC5842B9AC9D400E68ECA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF156A90C7025826840228CF /* Pods_KueskiChallenge.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57CAC59D2B9AC9D600E68ECA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57CAC5A72B9AC9D600E68ECA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		57CAC57E2B9AC9D400E68ECA = {
+			isa = PBXGroup;
+			children = (
+				57CAC5892B9AC9D400E68ECA /* KueskiChallenge */,
+				57CAC5A32B9AC9D600E68ECA /* KueskiChallengeTests */,
+				57CAC5AD2B9AC9D600E68ECA /* KueskiChallengeUITests */,
+				57CAC5882B9AC9D400E68ECA /* Products */,
+				9616DD138A1A65440748C898 /* Pods */,
+				9F1C502A7E0A69CEC35D5F6B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		57CAC5882B9AC9D400E68ECA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				57CAC5872B9AC9D400E68ECA /* KueskiChallenge.app */,
+				57CAC5A02B9AC9D600E68ECA /* KueskiChallengeTests.xctest */,
+				57CAC5AA2B9AC9D600E68ECA /* KueskiChallengeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		57CAC5892B9AC9D400E68ECA /* KueskiChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				57CAC58A2B9AC9D400E68ECA /* AppDelegate.swift */,
+				57CAC58C2B9AC9D400E68ECA /* SceneDelegate.swift */,
+				57CAC59B2B9AC9D500E68ECA /* Info.plist */,
+				57CAC5BD2B9ACCEE00E68ECA /* Modules */,
+				57CAC5BE2B9ACCF900E68ECA /* Model */,
+				57CAC5BF2B9ACD0B00E68ECA /* Utilities */,
+				57CAC5C02B9ACD1B00E68ECA /* Resources */,
+			);
+			path = KueskiChallenge;
+			sourceTree = "<group>";
+		};
+		57CAC5A32B9AC9D600E68ECA /* KueskiChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				57CAC5A42B9AC9D600E68ECA /* KueskiChallengeTests.swift */,
+			);
+			path = KueskiChallengeTests;
+			sourceTree = "<group>";
+		};
+		57CAC5AD2B9AC9D600E68ECA /* KueskiChallengeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				57CAC5AE2B9AC9D600E68ECA /* KueskiChallengeUITests.swift */,
+				57CAC5B02B9AC9D600E68ECA /* KueskiChallengeUITestsLaunchTests.swift */,
+			);
+			path = KueskiChallengeUITests;
+			sourceTree = "<group>";
+		};
+		57CAC5BD2B9ACCEE00E68ECA /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				57CAC5C12B9ACD4000E68ECA /* Splash */,
+				57CAC5C22B9ACD4B00E68ECA /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		57CAC5BE2B9ACCF900E68ECA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				57CAC5C52B9ACDA400E68ECA /* Networking */,
+				57CAC5C62B9ACDB100E68ECA /* Managers */,
+				57CAC5C82B9ACDDC00E68ECA /* Entities */,
+				57CAC5C72B9ACDC200E68ECA /* Storage */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		57CAC5BF2B9ACD0B00E68ECA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		57CAC5C02B9ACD1B00E68ECA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				57CAC5962B9AC9D500E68ECA /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		57CAC5C12B9ACD4000E68ECA /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				57CAC5982B9AC9D500E68ECA /* LaunchScreen.storyboard */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		57CAC5C22B9ACD4B00E68ECA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				57CAC5C32B9ACD6400E68ECA /* Controllers */,
+				57CAC5C42B9ACD6C00E68ECA /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		57CAC5C32B9ACD6400E68ECA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				57CAC58E2B9AC9D400E68ECA /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		57CAC5C42B9ACD6C00E68ECA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				57CAC5902B9AC9D400E68ECA /* Home.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		57CAC5C52B9ACDA400E68ECA /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		57CAC5C62B9ACDB100E68ECA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		57CAC5C72B9ACDC200E68ECA /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				57CAC5932B9AC9D400E68ECA /* KueskiChallenge.xcdatamodeld */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		57CAC5C82B9ACDDC00E68ECA /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		9616DD138A1A65440748C898 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				05357736D49AD9D7462CBB02 /* Pods-KueskiChallenge.debug.xcconfig */,
+				DCAFEC0D83FE37BB928805E4 /* Pods-KueskiChallenge.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9F1C502A7E0A69CEC35D5F6B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2FC16714D4561EA9348D6888 /* Pods_KueskiChallenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		57CAC5862B9AC9D400E68ECA /* KueskiChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57CAC5B42B9AC9D600E68ECA /* Build configuration list for PBXNativeTarget "KueskiChallenge" */;
+			buildPhases = (
+				CB42DE3EDA9A0539A7496E3B /* [CP] Check Pods Manifest.lock */,
+				57CAC5832B9AC9D400E68ECA /* Sources */,
+				57CAC5842B9AC9D400E68ECA /* Frameworks */,
+				57CAC5852B9AC9D400E68ECA /* Resources */,
+				7EA508DE341A8E25F2A74ABB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KueskiChallenge;
+			productName = KueskiChallenge;
+			productReference = 57CAC5872B9AC9D400E68ECA /* KueskiChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		57CAC59F2B9AC9D600E68ECA /* KueskiChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57CAC5B72B9AC9D600E68ECA /* Build configuration list for PBXNativeTarget "KueskiChallengeTests" */;
+			buildPhases = (
+				57CAC59C2B9AC9D600E68ECA /* Sources */,
+				57CAC59D2B9AC9D600E68ECA /* Frameworks */,
+				57CAC59E2B9AC9D600E68ECA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57CAC5A22B9AC9D600E68ECA /* PBXTargetDependency */,
+			);
+			name = KueskiChallengeTests;
+			productName = KueskiChallengeTests;
+			productReference = 57CAC5A02B9AC9D600E68ECA /* KueskiChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		57CAC5A92B9AC9D600E68ECA /* KueskiChallengeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57CAC5BA2B9AC9D600E68ECA /* Build configuration list for PBXNativeTarget "KueskiChallengeUITests" */;
+			buildPhases = (
+				57CAC5A62B9AC9D600E68ECA /* Sources */,
+				57CAC5A72B9AC9D600E68ECA /* Frameworks */,
+				57CAC5A82B9AC9D600E68ECA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57CAC5AC2B9AC9D600E68ECA /* PBXTargetDependency */,
+			);
+			name = KueskiChallengeUITests;
+			productName = KueskiChallengeUITests;
+			productReference = 57CAC5AA2B9AC9D600E68ECA /* KueskiChallengeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		57CAC57F2B9AC9D400E68ECA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					57CAC5862B9AC9D400E68ECA = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					57CAC59F2B9AC9D600E68ECA = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 57CAC5862B9AC9D400E68ECA;
+					};
+					57CAC5A92B9AC9D600E68ECA = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 57CAC5862B9AC9D400E68ECA;
+					};
+				};
+			};
+			buildConfigurationList = 57CAC5822B9AC9D400E68ECA /* Build configuration list for PBXProject "KueskiChallenge" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 57CAC57E2B9AC9D400E68ECA;
+			productRefGroup = 57CAC5882B9AC9D400E68ECA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				57CAC5862B9AC9D400E68ECA /* KueskiChallenge */,
+				57CAC59F2B9AC9D600E68ECA /* KueskiChallengeTests */,
+				57CAC5A92B9AC9D600E68ECA /* KueskiChallengeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		57CAC5852B9AC9D400E68ECA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57CAC5972B9AC9D500E68ECA /* Assets.xcassets in Resources */,
+				57CAC59A2B9AC9D500E68ECA /* Base in Resources */,
+				57CAC5922B9AC9D400E68ECA /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57CAC59E2B9AC9D600E68ECA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57CAC5A82B9AC9D600E68ECA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7EA508DE341A8E25F2A74ABB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KueskiChallenge/Pods-KueskiChallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KueskiChallenge/Pods-KueskiChallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KueskiChallenge/Pods-KueskiChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB42DE3EDA9A0539A7496E3B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KueskiChallenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		57CAC5832B9AC9D400E68ECA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57CAC58F2B9AC9D400E68ECA /* HomeViewController.swift in Sources */,
+				57CAC58B2B9AC9D400E68ECA /* AppDelegate.swift in Sources */,
+				57CAC58D2B9AC9D400E68ECA /* SceneDelegate.swift in Sources */,
+				57CAC5952B9AC9D400E68ECA /* KueskiChallenge.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57CAC59C2B9AC9D600E68ECA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57CAC5A52B9AC9D600E68ECA /* KueskiChallengeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57CAC5A62B9AC9D600E68ECA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57CAC5B12B9AC9D600E68ECA /* KueskiChallengeUITestsLaunchTests.swift in Sources */,
+				57CAC5AF2B9AC9D600E68ECA /* KueskiChallengeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		57CAC5A22B9AC9D600E68ECA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57CAC5862B9AC9D400E68ECA /* KueskiChallenge */;
+			targetProxy = 57CAC5A12B9AC9D600E68ECA /* PBXContainerItemProxy */;
+		};
+		57CAC5AC2B9AC9D600E68ECA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57CAC5862B9AC9D400E68ECA /* KueskiChallenge */;
+			targetProxy = 57CAC5AB2B9AC9D600E68ECA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		57CAC5902B9AC9D400E68ECA /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57CAC5912B9AC9D400E68ECA /* Base */,
+			);
+			name = Home.storyboard;
+			sourceTree = "<group>";
+		};
+		57CAC5982B9AC9D500E68ECA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57CAC5992B9AC9D500E68ECA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		57CAC5B22B9AC9D600E68ECA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		57CAC5B32B9AC9D600E68ECA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		57CAC5B52B9AC9D600E68ECA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05357736D49AD9D7462CBB02 /* Pods-KueskiChallenge.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NC997C3AT4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KueskiChallenge/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paxi.KueskiChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		57CAC5B62B9AC9D600E68ECA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCAFEC0D83FE37BB928805E4 /* Pods-KueskiChallenge.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NC997C3AT4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KueskiChallenge/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paxi.KueskiChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		57CAC5B82B9AC9D600E68ECA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NC997C3AT4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paxi.KueskiChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KueskiChallenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KueskiChallenge";
+			};
+			name = Debug;
+		};
+		57CAC5B92B9AC9D600E68ECA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NC997C3AT4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paxi.KueskiChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KueskiChallenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KueskiChallenge";
+			};
+			name = Release;
+		};
+		57CAC5BB2B9AC9D600E68ECA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NC997C3AT4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paxi.KueskiChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KueskiChallenge;
+			};
+			name = Debug;
+		};
+		57CAC5BC2B9AC9D600E68ECA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NC997C3AT4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paxi.KueskiChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KueskiChallenge;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		57CAC5822B9AC9D400E68ECA /* Build configuration list for PBXProject "KueskiChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57CAC5B22B9AC9D600E68ECA /* Debug */,
+				57CAC5B32B9AC9D600E68ECA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57CAC5B42B9AC9D600E68ECA /* Build configuration list for PBXNativeTarget "KueskiChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57CAC5B52B9AC9D600E68ECA /* Debug */,
+				57CAC5B62B9AC9D600E68ECA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57CAC5B72B9AC9D600E68ECA /* Build configuration list for PBXNativeTarget "KueskiChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57CAC5B82B9AC9D600E68ECA /* Debug */,
+				57CAC5B92B9AC9D600E68ECA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57CAC5BA2B9AC9D600E68ECA /* Build configuration list for PBXNativeTarget "KueskiChallengeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57CAC5BB2B9AC9D600E68ECA /* Debug */,
+				57CAC5BC2B9AC9D600E68ECA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		57CAC5932B9AC9D400E68ECA /* KueskiChallenge.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				57CAC5942B9AC9D400E68ECA /* KueskiChallenge.xcdatamodel */,
+			);
+			currentVersion = 57CAC5942B9AC9D400E68ECA /* KueskiChallenge.xcdatamodel */;
+			path = KueskiChallenge.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 57CAC57F2B9AC9D400E68ECA /* Project object */;
+}
