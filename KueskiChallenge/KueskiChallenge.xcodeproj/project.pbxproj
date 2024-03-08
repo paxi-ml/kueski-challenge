@@ -17,6 +17,14 @@
 		57CAC5A52B9AC9D600E68ECA /* KueskiChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAC5A42B9AC9D600E68ECA /* KueskiChallengeTests.swift */; };
 		57CAC5AF2B9AC9D600E68ECA /* KueskiChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAC5AE2B9AC9D600E68ECA /* KueskiChallengeUITests.swift */; };
 		57CAC5B12B9AC9D600E68ECA /* KueskiChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAC5B02B9AC9D600E68ECA /* KueskiChallengeUITestsLaunchTests.swift */; };
+		57CAC5CB2B9AD53400E68ECA /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAC5CA2B9AD53400E68ECA /* Movie.swift */; };
+		57CAC5CD2B9AD54800E68ECA /* MovieDBConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAC5CC2B9AD54800E68ECA /* MovieDBConfiguration.swift */; };
+		57CAC5CF2B9AD55C00E68ECA /* MoviePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAC5CE2B9AD55C00E68ECA /* MoviePage.swift */; };
+		57CAC5D12B9AD56800E68ECA /* Parseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAC5D02B9AD56800E68ECA /* Parseable.swift */; };
+		57CAC5D32B9AD5EF00E68ECA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAC5D22B9AD5EF00E68ECA /* Extensions.swift */; };
+		57CAC5D52B9AD62E00E68ECA /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAC5D42B9AD62E00E68ECA /* MovieService.swift */; };
+		57CAC5D72B9AD64E00E68ECA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAC5D62B9AD64E00E68ECA /* Constants.swift */; };
+		57CAC5D92B9AD76200E68ECA /* MovieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAC5D82B9AD76200E68ECA /* MovieManager.swift */; };
 		DF156A90C7025826840228CF /* Pods_KueskiChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC16714D4561EA9348D6888 /* Pods_KueskiChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +63,14 @@
 		57CAC5AE2B9AC9D600E68ECA /* KueskiChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KueskiChallengeUITests.swift; sourceTree = "<group>"; };
 		57CAC5B02B9AC9D600E68ECA /* KueskiChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KueskiChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		57CAC5C92B9AD0DE00E68ECA /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		57CAC5CA2B9AD53400E68ECA /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		57CAC5CC2B9AD54800E68ECA /* MovieDBConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBConfiguration.swift; sourceTree = "<group>"; };
+		57CAC5CE2B9AD55C00E68ECA /* MoviePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePage.swift; sourceTree = "<group>"; };
+		57CAC5D02B9AD56800E68ECA /* Parseable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parseable.swift; sourceTree = "<group>"; };
+		57CAC5D22B9AD5EF00E68ECA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		57CAC5D42B9AD62E00E68ECA /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		57CAC5D62B9AD64E00E68ECA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		57CAC5D82B9AD76200E68ECA /* MovieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieManager.swift; sourceTree = "<group>"; };
 		DCAFEC0D83FE37BB928805E4 /* Pods-KueskiChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KueskiChallenge.release.xcconfig"; path = "Target Support Files/Pods-KueskiChallenge/Pods-KueskiChallenge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,6 +176,7 @@
 		57CAC5BF2B9ACD0B00E68ECA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				57CAC5D22B9AD5EF00E68ECA /* Extensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -209,6 +226,7 @@
 		57CAC5C52B9ACDA400E68ECA /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				57CAC5D42B9AD62E00E68ECA /* MovieService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -216,6 +234,7 @@
 		57CAC5C62B9ACDB100E68ECA /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				57CAC5D82B9AD76200E68ECA /* MovieManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -231,6 +250,11 @@
 		57CAC5C82B9ACDDC00E68ECA /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				57CAC5CA2B9AD53400E68ECA /* Movie.swift */,
+				57CAC5CC2B9AD54800E68ECA /* MovieDBConfiguration.swift */,
+				57CAC5CE2B9AD55C00E68ECA /* MoviePage.swift */,
+				57CAC5D02B9AD56800E68ECA /* Parseable.swift */,
+				57CAC5D62B9AD64E00E68ECA /* Constants.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -428,9 +452,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				57CAC58F2B9AC9D400E68ECA /* HomeViewController.swift in Sources */,
+				57CAC5D72B9AD64E00E68ECA /* Constants.swift in Sources */,
+				57CAC5D32B9AD5EF00E68ECA /* Extensions.swift in Sources */,
+				57CAC5D12B9AD56800E68ECA /* Parseable.swift in Sources */,
+				57CAC5D92B9AD76200E68ECA /* MovieManager.swift in Sources */,
 				57CAC58B2B9AC9D400E68ECA /* AppDelegate.swift in Sources */,
+				57CAC5D52B9AD62E00E68ECA /* MovieService.swift in Sources */,
 				57CAC58D2B9AC9D400E68ECA /* SceneDelegate.swift in Sources */,
 				57CAC5952B9AC9D400E68ECA /* KueskiChallenge.xcdatamodeld in Sources */,
+				57CAC5CB2B9AD53400E68ECA /* Movie.swift in Sources */,
+				57CAC5CF2B9AD55C00E68ECA /* MoviePage.swift in Sources */,
+				57CAC5CD2B9AD54800E68ECA /* MovieDBConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
