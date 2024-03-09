@@ -8,26 +8,59 @@
 import XCTest
 
 final class KueskiChallengeUITests: XCTestCase {
-
+    var app:XCUIApplication = XCUIApplication()
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        app.launch()
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        app.terminate()
     }
 
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testCollectionViewLoading() throws {
+        assert(app.segmentedControls.firstMatch.waitForExistence(timeout: 5.0), "Grid/table selector not showing")
+        app.segmentedControls.firstMatch.buttons["squareshape.split.3x3"].tap()
+        assert(app.collectionViews.firstMatch.waitForExistence(timeout: 5.0), "Grid never loaded")
+        let collectionView = app.collectionViews.firstMatch
+        assert(collectionView.cells.firstMatch.waitForExistence(timeout: 5.0), "Grid cells never loaded")
+        
+        // We could do something lile this calculating screen height / cell height and check that screen is filled, but not much use right now, just wanted to show is a possibility.
+        //assert(collectionView.cells.count == 6, "Not all initially visible grid cells loaded correctly")
+        
+        // Or we can get creative and just count the cells and scroll to the bottom.
+        var scrolls = 0
+        var allCells:[String] = []
+        var cellCount = -1
+        while (cellCount != allCells.count) {
+            cellCount = allCells.count
+            var cellIndex = 0
+            while (collectionView.cells.element(boundBy: cellIndex).exists) {
+                let cell = collectionView.cells.element(boundBy: cellIndex)
+                let title = cell.staticTexts.element(boundBy: 4)
+                if (!allCells.contains(title.label)) {
+                    allCells.append(title.label)
+                }
+                cellIndex = cellIndex + 1
+            }
+            app.swipeUp()
+            scrolls = scrolls + 1
+            if (scrolls > 5) {
+                break
+            }
+        }
+        assert(cellCount == 20, "Not all grid cells are available")
+    }
+    
+    func testTableViewLoading() throws {
+        assert(app.segmentedControls.firstMatch.waitForExistence(timeout: 5.0), "Grid/table selector not showing")
+        app.segmentedControls.firstMatch.buttons["list.star"].tap()
+        assert(app.tables.firstMatch.waitForExistence(timeout: 5.0), "Table never loaded")
+        let tableView = app.tables.firstMatch
+        assert(tableView.cells.firstMatch.waitForExistence(timeout: 5.0), "Table cells never loaded")
+        //Same here
+        //assert(tableView.cells.count == 20, "Not all table cells loaded correctly")
     }
 
     func testLaunchPerformance() throws {
