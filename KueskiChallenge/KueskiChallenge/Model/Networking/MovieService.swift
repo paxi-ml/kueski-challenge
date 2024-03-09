@@ -57,6 +57,11 @@ class MovieService {
     
     //MARK: Requests
     func fetchConfiguration(completion: @escaping () -> Void) {
+        if self.configurationBaseUrl != nil {
+            completion()
+            return
+        }
+        
         var urlParameters:[String:String] = [:]
         
         urlParameters["api_key"] = Bundle.main.infoDictionary?["MOVIE_DB_API_KEY"] as? String ?? ""
@@ -89,6 +94,11 @@ class MovieService {
             sessionManager.request(url, parameters: urlParameters).responseJSON { response in
                 if let dict = self.parseResponseToDict(response: response),
                    let page : MoviePage = dict.parseToObj() {
+                    _ = page.movies.compactMap { movie in
+                        self.fetchImage(fromPath:movie.posterPath, completion: { image in
+                            movie.posterImage = image
+                        })
+                    }
                     completion(page)
                 }
                 completion(nil)
@@ -123,7 +133,7 @@ class MovieService {
     }
     
     func fetchImage(fromPath path:String, completion: @escaping (UIImage?) -> Void) {
-        if let url = URL(string: "\(Constants.MOVIE_IMAGE_SIZE)/\(path)", relativeTo: self.configurationBaseUrl) {
+        if let url = URL(string: "\(Constants.MOVIE_IMAGE_SIZE)\(path)", relativeTo: self.configurationBaseUrl) {
             let apiKey = URLQueryItem(name: "api_key", value: Bundle.main.infoDictionary?["MOVIE_DB_API_KEY"] as? String ?? "")
             let fullUrl = url.appending(queryItems: [apiKey])
             let urlRequest = URLRequest(url: fullUrl, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)

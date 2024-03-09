@@ -9,9 +9,10 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet var collectionView:UICollectionView?
-    @IBOutlet var tableView:UITableView?
-    @IBOutlet var layoutControl:UISegmentedControl?
+    @IBOutlet weak var collectionView:UICollectionView?
+    @IBOutlet weak var tableView:UITableView?
+    @IBOutlet weak var layoutControl:UISegmentedControl?
+    @IBOutlet weak var movieModeControl:UISegmentedControl?
     var movieManager: MovieManager = MovieManager() //In more complex navigations we could pass this in dependency injection
     
     let TILES_PER_ROW = 2.0
@@ -38,6 +39,14 @@ class HomeViewController: UIViewController {
     @IBAction func layoutChanged() {
         self.tableView?.isHidden = self.layoutControl?.selectedSegmentIndex == 0
         self.collectionView?.isHidden = self.layoutControl?.selectedSegmentIndex == 1
+    }
+    
+    @IBAction func tappedOnChangeMovieMode() {
+        self.movieManager.mode = self.movieModeControl?.selectedSegmentIndex == 0 ? .mostPopular : .nowPlaying
+        self.movieManager.loadData {
+            self.tableView?.reloadData()
+            self.collectionView?.reloadData()
+        }
     }
 }
 
@@ -67,6 +76,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
                     let movie = page.movies[indexPath.row]
                     DispatchQueue.main.async {
                         cell.populateCell(withMovie: movie)
+                    }
+                    cell.observation = movie.observe(\Movie.posterImage) { movie, change in
+                        UIView.performWithoutAnimation {
+                            self.collectionView?.reloadItems(at: [indexPath])
+                        }
                     }
                     return cell
                 }
@@ -104,6 +118,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 let movie = page.movies[indexPath.row]
                 DispatchQueue.main.async {
                     cell.populateCell(withMovie: movie)
+                }
+                cell.observation = movie.observe(\Movie.posterImage) { movie, change in
+                    self.tableView?.reloadRows(at: [indexPath], with: .none)
                 }
                 return cell
             }

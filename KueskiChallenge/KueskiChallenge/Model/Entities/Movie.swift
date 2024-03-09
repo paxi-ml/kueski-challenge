@@ -10,7 +10,7 @@ import UIKit
 
 let INVALID_MOVIE_ID = -1
 
-class Movie : Parseable{
+class Movie : NSObject, Parseable {
     // We could also use nil but it's better to keep as non-optional to reduce unwrapping, and type can be inferred too.
     var genreIds:NSArray? = nil
     var isAdult = false
@@ -22,7 +22,7 @@ class Movie : Parseable{
     var voteCount = 0
     var popularity = 0.0
     var posterPath = ""
-    var posterImage:UIImage? = nil
+    @objc dynamic var posterImage:UIImage? = nil
     var overview = ""
     var originalLanguage = ""
     var releaseDateString: String = "" // We don't do date operations so to avoid the dateformatter overhead, let's keep it string
@@ -32,6 +32,7 @@ class Movie : Parseable{
     }
     
     required init?(fromDictionary dict: NSDictionary) {
+        super.init()
         // We are abusing a bit of unwrapping and casting, but the idea is to have clean data on the next layer, so if some id or field is empty we should not use that object, is a more recommended approach than taking care of a lot of optionals or uncasted values on next layer.
         self.genreIds = dict.object(forKey: "genre_ids") as? NSArray
         self.isAdult = dict.object(forKey: "adult") as? Bool ?? false
