@@ -21,7 +21,7 @@ final class KueskiChallengeUITests: XCTestCase {
 
     func testCollectionViewLoading() throws {
         assert(app.segmentedControls.firstMatch.waitForExistence(timeout: 5.0), "Grid/table selector not showing")
-        app.segmentedControls.firstMatch.buttons["squareshape.split.3x3"].tap()
+        app.segmentedControls.buttons["squareshape.split.3x3"].tap()
         assert(app.collectionViews.firstMatch.waitForExistence(timeout: 5.0), "Grid never loaded")
         let collectionView = app.collectionViews.firstMatch
         assert(collectionView.cells.firstMatch.waitForExistence(timeout: 5.0), "Grid cells never loaded")
@@ -50,12 +50,12 @@ final class KueskiChallengeUITests: XCTestCase {
                 break
             }
         }
-        assert(cellCount == 20, "Not all grid cells are available")
+        assert(cellCount > 20, "Pagination not working correctly in grid")
     }
     
     func testTableViewLoading() throws {
         assert(app.segmentedControls.firstMatch.waitForExistence(timeout: 5.0), "Grid/table selector not showing")
-        app.segmentedControls.firstMatch.buttons["list.star"].tap()
+        app.segmentedControls.buttons["list.star"].tap()
         assert(app.tables.firstMatch.waitForExistence(timeout: 5.0), "Table never loaded")
         let tableView = app.tables.firstMatch
         assert(tableView.cells.firstMatch.waitForExistence(timeout: 5.0), "Table cells never loaded")

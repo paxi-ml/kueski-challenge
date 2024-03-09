@@ -19,7 +19,7 @@ Real projects have a lot more complexity but I believe for now I have shared a p
 # Test
 So far there's not much business logic or complex algorithms for unit tests to be meaningful, and APIs are normally tested in the API itself since unit tests shouldn't have networking (just mocks). I added the parsing which is most of the app and not sure if I'll be implementing the sorting optional but that would be a good candidate for unit tests.
 For UI Tests there's a ton of tests we could do, but I just showed some of the basic elements you have to know to do UI tests. Now, analizing the necessity of UI tests is a difficult matter since we have to weight how precise is it gonna be testing the UI, how much effort will we invest and if we're not just building tests to pass them.
-TODO: If I implement pagination than I'll update the UI Tests just to check that multiple pages load, but I don't think I'll make it reach the end of the scroll.
+Now that we have Now Playing we could do some UI Testing on it, but it'll be the same as testing most popular but after tapping the segmented control, so not for now.
 
 
 # Kueski Questions

@@ -94,6 +94,19 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let width = (collectionView.frame.size.width - ((TILES_PER_ROW) * INTER_CELL_SPACING)) / TILES_PER_ROW
         return CGSize(width: width, height: width * TILE_WIDTH_TO_HEIGHT_RATIO)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.section == movieManager.pages.count - 1 &&
+            movieManager.pages.count < movieManager.totalPages {
+            let page = movieManager.pages[indexPath.section]
+            if (indexPath.row == page.movies.count - 1) {
+                movieManager.loadData {
+                    self.collectionView?.reloadData()
+                    self.tableView?.reloadData()
+                }
+            }
+        }
+    }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -138,6 +151,19 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return cellHeight
         }
         return (MovieTableCell.CELL_HEIGHT_WITHOUT_OVERVIEW + MovieTableCell.OVERVIEW_INITIAL_SIZE)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.section == movieManager.pages.count - 1  &&
+            movieManager.pages.count < movieManager.totalPages {
+            let page = movieManager.pages[indexPath.section]
+            if (indexPath.row == page.movies.count - 1) {
+                movieManager.loadData {
+                    self.collectionView?.reloadData()
+                    self.tableView?.reloadData()
+                }
+            }
+        }
     }
 }
 

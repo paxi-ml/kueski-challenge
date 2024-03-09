@@ -77,7 +77,7 @@ class MovieService {
         }
     }
     
-    func fetchNowPlaying (completion: @escaping (MoviePage?) -> Void) {
+    func fetchNowPlaying (page:Int, completion: @escaping (MoviePage?) -> Void) {
         var urlParameters:[String:String] = [:]
         
         urlParameters["api_key"] = Bundle.main.infoDictionary?["MOVIE_DB_API_KEY"] as? String ?? ""
@@ -88,7 +88,7 @@ class MovieService {
         urlParameters["with_release_type"] = "2|3"
         urlParameters["release_date.gte"] = "2023-06-01"
         urlParameters["release_date.lte"] = "2024-02-28"
-        urlParameters["page"] = "1"
+        urlParameters["page"] = "\(page)"
         
         if let url = URL(string: "\(MovieDB.movieDiscovery.rawValue)", relativeTo: MovieDB.host) {
             sessionManager.request(url, parameters: urlParameters).responseJSON { response in
@@ -106,7 +106,7 @@ class MovieService {
         }
     }
     
-    func fetchMostPopular (completion: @escaping (MoviePage?) -> Void) {
+    func fetchMostPopular (page:Int, completion: @escaping (MoviePage?) -> Void) {
         var urlParameters:[String:String] = [:]
         
         urlParameters["api_key"] = Bundle.main.infoDictionary?["MOVIE_DB_API_KEY"] as? String ?? ""
@@ -114,7 +114,7 @@ class MovieService {
         urlParameters["include_video"] = "false"
         urlParameters["language"] = "en-US"
         urlParameters["sort_by"] = "popularity.desc"
-        urlParameters["page"] = "1"
+        urlParameters["page"] = "\(page)"
         
         if let url = URL(string: "\(MovieDB.movieDiscovery.rawValue)", relativeTo: MovieDB.host) {
             sessionManager.request(url, parameters: urlParameters).responseJSON { response in

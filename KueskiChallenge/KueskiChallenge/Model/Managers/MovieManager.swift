@@ -14,11 +14,11 @@ enum MovieMode :String {
 
 class MovieManager {
     var pages:[MoviePage] = []
-    var currentPage = 0
+    var currentPage = 1
     var totalPages = 0
     var mode:MovieMode = .mostPopular {
         didSet {
-            currentPage = 0
+            currentPage = 1
             totalPages = 0
             pages = []
         }
@@ -27,7 +27,7 @@ class MovieManager {
     //We could store both most recent and now playing to avoid data consumption and time loading, but this will depend on what's more important for us and our users, less memory allocated by the app or less data consumption.
     func loadMovies(completion: @escaping () -> Void) {
         if (self.mode == .mostPopular) {
-            MovieService.shared.fetchMostPopular { moviePage in
+            MovieService.shared.fetchMostPopular(page: self.currentPage, completion: { moviePage in
                 //this means the mode changed while this responded.
                 if (self.mode != .mostPopular) {
                     return
@@ -39,9 +39,9 @@ class MovieManager {
                     self.pages.append(page)
                     completion()
                 }
-            }
+            })
         } else {
-            MovieService.shared.fetchNowPlaying { moviePage in
+            MovieService.shared.fetchNowPlaying(page: self.currentPage, completion: { moviePage in
                 //this means the mode changed while this responded.
                 if (self.mode != .nowPlaying) {
                     return
@@ -53,7 +53,7 @@ class MovieManager {
                     self.pages.append(page)
                     completion()
                 }
-            }
+            })
         }
     }
     

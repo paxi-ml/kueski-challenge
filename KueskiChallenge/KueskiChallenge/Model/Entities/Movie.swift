@@ -51,7 +51,7 @@ class Movie : NSObject, Parseable {
     
     func changeFavorite() {
         let defaults = UserDefaults.standard
-        if let favorited = defaults.object(forKey: self.favoriteKey) as? Bool {
+        if let _ = defaults.object(forKey: self.favoriteKey) as? Bool {
             self.isFavorite = false
             defaults.removeObject(forKey: self.favoriteKey)
         } else {
