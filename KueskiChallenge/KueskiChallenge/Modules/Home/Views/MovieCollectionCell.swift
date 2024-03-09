@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+protocol MovieCollectionCellDelegate {
+    func didTapFavoriteOnCollection(_ cell:UICollectionViewCell)
+}
+
 class MovieCollectionCell : UICollectionViewCell {
     static var CELL_IDENTIFIER = "movie_collection_cell"
     static var NIB_NAME = "MovieCollectionCell"
@@ -20,13 +24,15 @@ class MovieCollectionCell : UICollectionViewCell {
     @IBOutlet var releaseDateLabel: UILabel?
     @IBOutlet var languageLabel: UILabel?
     @IBOutlet var voteAverageLabel: UILabel?
-    @IBOutlet var statusIcon: UIImageView?
+    @IBOutlet var favoriteButton: UIButton?
+    
+    var delegate: MovieCollectionCellDelegate? = nil
     
     func populateCell(withMovie movie: Movie) {
         // So far this is the same as MovieTableCell, normally this is not recommended since replicating code can lead to bugs, however is not common for the grid and table to have the same info, so I'll leave it like this since the tendency is for those layout to drift apart in real projects.
         self.titleLabel?.text = movie.title
         self.posterImageView?.image = movie.posterImage
-        self.statusIcon?.isHidden = !movie.isFavorite
+        self.favoriteButton?.isSelected = movie.isFavorite
         self.overviewTextView?.text = movie.overview
         self.popularityLabel?.text = "\(movie.popularity)"
         self.languageLabel?.text = movie.originalLanguage
@@ -38,5 +44,9 @@ class MovieCollectionCell : UICollectionViewCell {
                 self.genresLabel?.text?.append("\(genre),")
             }
         }
+    }
+    
+    @IBAction func tappedFavorite() {
+        self.delegate?.didTapFavoriteOnCollection(self)
     }
 }

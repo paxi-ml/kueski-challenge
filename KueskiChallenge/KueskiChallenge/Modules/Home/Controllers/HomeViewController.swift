@@ -59,6 +59,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCollectionCell.CELL_IDENTIFIER, for: indexPath) as? MovieCollectionCell {
+            cell.delegate = self
             //We separate this 2 conditionals to be able to return cell since dequeued cell should crash UICollectionViewCell() does.
             if (indexPath.section < self.movieManager.pages.count) {
                 let page = self.movieManager.pages[indexPath.section]
@@ -97,6 +98,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableCell.CELL_IDENTIFIER) as? MovieTableCell,
            indexPath.section < self.movieManager.pages.count {
+            cell.delegate = self
             let page = self.movieManager.pages[indexPath.section]
             if indexPath.row < page.movies.count {
                 let movie = page.movies[indexPath.row]
@@ -119,5 +121,27 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return cellHeight
         }
         return (MovieTableCell.CELL_HEIGHT_WITHOUT_OVERVIEW + MovieTableCell.OVERVIEW_INITIAL_SIZE)
+    }
+}
+
+extension HomeViewController: MovieTableCellDelegate, MovieCollectionCellDelegate {
+    func didTapFavoriteOnTable(_ cell: UITableViewCell) {
+        if let indexPath = tableView?.indexPath(for: cell) {
+            let page = self.movieManager.pages[indexPath.section]
+            let movie = page.movies[indexPath.row]
+            movie.changeFavorite()
+            self.tableView?.reloadRows(at: [indexPath], with: .none)
+        }
+    }
+    
+    func didTapFavoriteOnCollection(_ cell: UICollectionViewCell) {
+        if let indexPath = collectionView?.indexPath(for: cell) {
+            let page = self.movieManager.pages[indexPath.section]
+            let movie = page.movies[indexPath.row]
+            movie.changeFavorite()
+            UIView.performWithoutAnimation {
+                self.collectionView?.reloadItems(at: [indexPath])
+            }
+        }
     }
 }

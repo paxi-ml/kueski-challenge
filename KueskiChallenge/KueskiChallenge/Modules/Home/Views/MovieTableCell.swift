@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+protocol MovieTableCellDelegate {
+    func didTapFavoriteOnTable(_ cell:UITableViewCell)
+}
+
 class MovieTableCell : UITableViewCell {
     static var CELL_IDENTIFIER = "movie_table_cell"
     static var NIB_NAME = "MovieTableCell"
@@ -23,12 +27,14 @@ class MovieTableCell : UITableViewCell {
     @IBOutlet var releaseDateLabel: UILabel?
     @IBOutlet var languageLabel: UILabel?
     @IBOutlet var voteAverageLabel: UILabel?
-    @IBOutlet var statusIcon: UIImageView?
+    @IBOutlet var favoriteButton: UIButton?
+    
+    var delegate: MovieTableCellDelegate? = nil
     
     func populateCell(withMovie movie: Movie) {
         self.titleLabel?.text = movie.title
         self.posterImageView?.image = movie.posterImage
-        self.statusIcon?.isHidden = !movie.isFavorite
+        self.favoriteButton?.isSelected = movie.isFavorite
         self.overviewTextView?.text = movie.overview
         self.popularityLabel?.text = "\(movie.popularity)"
         self.languageLabel?.text = movie.originalLanguage
@@ -40,5 +46,9 @@ class MovieTableCell : UITableViewCell {
                 self.genresLabel?.text?.append("\(genre),")
             }
         }
+    }
+    
+    @IBAction func tappedFavorite() {
+        self.delegate?.didTapFavoriteOnTable(self)
     }
 }

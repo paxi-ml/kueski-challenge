@@ -26,6 +26,11 @@ class Movie : Parseable{
     var overview = ""
     var originalLanguage = ""
     var releaseDateString: String = "" // We don't do date operations so to avoid the dateformatter overhead, let's keep it string
+    
+    var favoriteKey : String {
+        return "favorited_\(id)"
+    }
+    
     required init?(fromDictionary dict: NSDictionary) {
         // We are abusing a bit of unwrapping and casting, but the idea is to have clean data on the next layer, so if some id or field is empty we should not use that object, is a more recommended approach than taking care of a lot of optionals or uncasted values on next layer.
         self.genreIds = dict.object(forKey: "genre_ids") as? NSArray
@@ -40,5 +45,17 @@ class Movie : Parseable{
         self.originalLanguage = dict.object(forKey: "original_language") as? String ?? ""
         self.voteCount = dict.object(forKey: "vote_count") as? Int ?? 0
         self.releaseDateString = dict.object(forKey: "release_date") as? String ?? ""
+        self.isFavorite = UserDefaults.standard.object(forKey: self.favoriteKey) as? Bool ?? false
+    }
+    
+    func changeFavorite() {
+        let defaults = UserDefaults.standard
+        if let favorited = defaults.object(forKey: self.favoriteKey) as? Bool {
+            self.isFavorite = false
+            defaults.removeObject(forKey: self.favoriteKey)
+        } else {
+            self.isFavorite = true
+            defaults.setValue(true, forKey: self.favoriteKey)
+        }
     }
 }
