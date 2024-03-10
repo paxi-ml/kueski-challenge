@@ -62,12 +62,10 @@ class MovieService {
             return
         }
         
-        var urlParameters:[String:String] = [:]
-        
-        urlParameters["api_key"] = Bundle.main.infoDictionary?["MOVIE_DB_API_KEY"] as? String ?? ""
+        let headers:HTTPHeaders = ["Authorization":"Bearer \(Bundle.main.infoDictionary?["MOVIE_DB_API_TOKEN"] as? String ?? "")"]
         
         if let url = URL(string: "\(MovieDB.configuration.rawValue)", relativeTo: MovieDB.host) {
-            sessionManager.request(url, parameters: urlParameters).responseJSON { response in
+            sessionManager.request(url, headers: headers).responseJSON { response in
                 if let dict = self.parseResponseToDict(response: response),
                    let config:MovieDBConfiguration = dict.parseToObj() {
                     self.configurationBaseUrl = config.baseUrl
@@ -79,8 +77,6 @@ class MovieService {
     
     func fetchNowPlaying (page:Int, completion: @escaping (MoviePage?) -> Void) {
         var urlParameters:[String:String] = [:]
-        
-        urlParameters["api_key"] = Bundle.main.infoDictionary?["MOVIE_DB_API_KEY"] as? String ?? ""
         urlParameters["include_adult"] = "false"
         urlParameters["include_video"] = "false"
         urlParameters["language"] = "en-US"
@@ -90,8 +86,10 @@ class MovieService {
         urlParameters["release_date.lte"] = "2024-02-28"
         urlParameters["page"] = "\(page)"
         
+        let headers:HTTPHeaders = ["Authorization":"Bearer \(Bundle.main.infoDictionary?["MOVIE_DB_API_TOKEN"] as? String ?? "")"]
+        
         if let url = URL(string: "\(MovieDB.movieDiscovery.rawValue)", relativeTo: MovieDB.host) {
-            sessionManager.request(url, parameters: urlParameters).responseJSON { response in
+            sessionManager.request(url, parameters: urlParameters, headers: headers).responseJSON { response in
                 if let dict = self.parseResponseToDict(response: response),
                    let page : MoviePage = dict.parseToObj() {
                     _ = page.movies.compactMap { movie in
@@ -109,16 +107,16 @@ class MovieService {
     
     func fetchMostPopular (page:Int, completion: @escaping (MoviePage?) -> Void) {
         var urlParameters:[String:String] = [:]
-        
-        urlParameters["api_key"] = Bundle.main.infoDictionary?["MOVIE_DB_API_KEY"] as? String ?? ""
         urlParameters["include_adult"] = "false"
         urlParameters["include_video"] = "false"
         urlParameters["language"] = "en-US"
         urlParameters["sort_by"] = "popularity.desc"
         urlParameters["page"] = "\(page)"
         
+        let headers:HTTPHeaders = ["Authorization":"Bearer \(Bundle.main.infoDictionary?["MOVIE_DB_API_TOKEN"] as? String ?? "")"]
+        
         if let url = URL(string: "\(MovieDB.movieDiscovery.rawValue)", relativeTo: MovieDB.host) {
-            sessionManager.request(url, parameters: urlParameters).responseJSON { response in
+            sessionManager.request(url, parameters: urlParameters, headers: headers).responseJSON { response in
                 if let dict = self.parseResponseToDict(response: response),
                    let page : MoviePage = dict.parseToObj() {
                     _ = page.movies.compactMap { movie in

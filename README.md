@@ -25,10 +25,10 @@ Now that we have Now Playing we could do some UI Testing on it, but it'll be the
 # Kueski Questions
 
 1. How long did you spend on this?
-- So far I'd say around 4 hours.
+- Around 7 hours.
 
 2. Did you complete your implementation?
-- Not yet. TBD, still have time till Monday, but my job is taking most of my spare time away from me this week, I'll try to have the missing items this week.
+- I'd say all requirements are there, but I wouldn't say complete since a lot of things could be improved, but I think this is enough for an interview exercise.
 
 3. What would you have added if you had more time?
 - Well it was unnecessary but a better branching model with a pull request template, would have been nice to simulate just to demonstrate the I know we shouldn't be pushing directly to prod, but oh well guess admitting on a real project I would do PRs, release branches, dev branch, etc. will suffice for now.
@@ -36,6 +36,7 @@ Now that we have Now Playing we could do some UI Testing on it, but it'll be the
 - I love animations and cool looking UI so I would've spent more time on those. Including maybe adding some gradients.
 - Also I would've spent more time checking for code-review-worthy items like variable naming and for every number to be explained, also better documentation on functions, etc.
 - Better error handling, we just have a general error. We should add Reachability instead of waiting for requests to fail, also in a real life scenario we would probably want to react differently to different status codes.
+- Sorting: For that Swift already has sorting functions, so I would just use just one movie array instead of multiples sections and movies pages.
 
 4. What was the most difficult part of the app?
 - Nothing so far, but I believe mobile development is in general pretty straight-forward, it only gets complicated when overcomplicating the UI or very specific scenarios that Apple didn't foresee or support, so basically when dealing with workarounds, but this project is intended to test regular functionality so as expected is really straight-forward.
