@@ -37,7 +37,7 @@ class MovieService {
             }
             return nil
 
-        case let .failure(error):
+        case .failure(_):
             return nil
         }
     }
@@ -50,7 +50,7 @@ class MovieService {
             }
             return nil
 
-        case let .failure(error):
+        case .failure(_):
             return nil
         }
     }
@@ -100,8 +100,9 @@ class MovieService {
                         })
                     }
                     completion(page)
+                } else {
+                    completion(nil)
                 }
-                completion(nil)
             }
         }
     }
@@ -126,8 +127,9 @@ class MovieService {
                         })
                     }
                     completion(page)
+                } else {
+                    completion(nil)
                 }
-                completion(nil)
             }
         }
     }

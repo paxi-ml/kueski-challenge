@@ -22,10 +22,18 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerCells()
-        self.movieManager.loadData {
-            self.collectionView?.reloadData()
-            self.tableView?.reloadData()
-        }
+        self.loadData()
+        self.setupRefreshControls()
+    }
+    
+    func setupRefreshControls() {
+        let refreshControlForTable = UIRefreshControl()
+        refreshControlForTable.addTarget(self, action: #selector(reloadData), for: .valueChanged)
+        self.tableView?.refreshControl = refreshControlForTable
+        
+        let refreshControlForGrid = UIRefreshControl()
+        refreshControlForGrid.addTarget(self, action: #selector(reloadData), for: .valueChanged)
+        self.collectionView?.refreshControl = refreshControlForGrid
     }
     
     func registerCells() {
@@ -43,10 +51,24 @@ class HomeViewController: UIViewController {
     
     @IBAction func tappedOnChangeMovieMode() {
         self.movieManager.mode = self.movieModeControl?.selectedSegmentIndex == 0 ? .mostPopular : .nowPlaying
-        self.movieManager.loadData {
-            self.tableView?.reloadData()
+        self.loadData()
+    }
+    
+    func loadData() {
+        self.movieManager.loadData { success in
+            self.tableView?.refreshControl?.endRefreshing()
+            self.collectionView?.refreshControl?.endRefreshing()
             self.collectionView?.reloadData()
+            self.tableView?.reloadData()
+            if (!success) {
+                ErrorHandler.showNetworkError(inVC: self)
+            }
         }
+    }
+    
+    @objc func reloadData() {
+        self.movieManager.clearData()
+        self.loadData()
     }
 }
 
@@ -100,10 +122,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             movieManager.pages.count < movieManager.totalPages {
             let page = movieManager.pages[indexPath.section]
             if (indexPath.row == page.movies.count - 1) {
-                movieManager.loadData {
-                    self.collectionView?.reloadData()
-                    self.tableView?.reloadData()
-                }
+                self.loadData()
             }
         }
     }
@@ -158,10 +177,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             movieManager.pages.count < movieManager.totalPages {
             let page = movieManager.pages[indexPath.section]
             if (indexPath.row == page.movies.count - 1) {
-                movieManager.loadData {
-                    self.collectionView?.reloadData()
-                    self.tableView?.reloadData()
-                }
+                self.loadData()
             }
         }
     }

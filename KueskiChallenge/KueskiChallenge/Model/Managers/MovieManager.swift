@@ -18,14 +18,12 @@ class MovieManager {
     var totalPages = 0
     var mode:MovieMode = .mostPopular {
         didSet {
-            currentPage = 1
-            totalPages = 0
-            pages = []
+            self.clearData()
         }
     }
     
     //We could store both most recent and now playing to avoid data consumption and time loading, but this will depend on what's more important for us and our users, less memory allocated by the app or less data consumption.
-    func loadMovies(completion: @escaping () -> Void) {
+    func loadMovies(completion: @escaping (Bool) -> Void) {
         if (self.mode == .mostPopular) {
             MovieService.shared.fetchMostPopular(page: self.currentPage, completion: { moviePage in
                 //this means the mode changed while this responded.
@@ -37,7 +35,9 @@ class MovieManager {
                     self.currentPage = self.currentPage + 1
                     self.totalPages = page.totalPages
                     self.pages.append(page)
-                    completion()
+                    completion(true)
+                } else {
+                    completion(false)
                 }
             })
         } else {
@@ -51,15 +51,23 @@ class MovieManager {
                     self.currentPage = self.currentPage + 1
                     self.totalPages = page.totalPages
                     self.pages.append(page)
-                    completion()
+                    completion(true)
+                } else {
+                    completion(false)
                 }
             })
         }
     }
     
-    func loadData(completion: @escaping () -> Void) {
+    func loadData(completion: @escaping (Bool) -> Void) {
         MovieService.shared.fetchConfiguration {
             self.loadMovies(completion: completion)
         }
+    }
+    
+    func clearData() {
+        currentPage = 1
+        totalPages = 0
+        pages = []
     }
 }

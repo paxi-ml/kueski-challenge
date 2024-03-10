@@ -35,6 +35,7 @@ Now that we have Now Playing we could do some UI Testing on it, but it'll be the
 - I would've spent more time on accessibility, dark mode and voiceover for example.
 - I love animations and cool looking UI so I would've spent more time on those. Including maybe adding some gradients.
 - Also I would've spent more time checking for code-review-worthy items like variable naming and for every number to be explained, also better documentation on functions, etc.
+- Better error handling, we just have a general error. We should add Reachability instead of waiting for requests to fail, also in a real life scenario we would probably want to react differently to different status codes.
 
 4. What was the most difficult part of the app?
 - Nothing so far, but I believe mobile development is in general pretty straight-forward, it only gets complicated when overcomplicating the UI or very specific scenarios that Apple didn't foresee or support, so basically when dealing with workarounds, but this project is intended to test regular functionality so as expected is really straight-forward.
